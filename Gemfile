@@ -5,7 +5,6 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development, :test do
-	gem 'sqlite3'
 	gem 'rspec-rails'
 	gem 'guard-rspec'
 	gem 'guard-spork'
@@ -13,6 +12,7 @@ group :development, :test do
 	gem 'capybara', '1.1.2'
 	gem 'rb-fsevent'
 	gem 'growl'
+	gem 'sqlite3'
 end
 
 # Gems used only for assets and not required

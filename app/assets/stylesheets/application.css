@@ -11,3 +11,21 @@
  *= require_self
  *= require_tree .
  */
+
+body { 	font-family:'Helvetica', Arial, sans-serif; font-size:14px; 
+	color: #333; background-color:#FFF; line-height:1.5em }
+h1 { font-family:'Helvetica', Arial, sans-serif; border:2px dashed;
+	line-height: 1em; color:#000; background-color:#FFF; padding:0.75em }
+h1.chapter { font-family:'Helvetica', Arial, sans-serif; border:none;
+	line-height: 1em; color:#FFF; background-color:#333; padding:1em }
+h2 { font-family:'Helvetica', Arial, sans-serif; 
+	line-height: 1em; color:#000 }
+h3 { font-family:'Helvetica', Arial, sans-serif; font-size:18px; 
+	line-height: 1em; color:#000 } 
+code { 	font-family: 'Monaco', monospace; font-size:12px }
+pre { color:#000; background:#EEE; padding:1em; line-height:1.35em }
+#content { margin: 3.5em }
+table { border-collapse: collapse; border: 1px solid #333 }
+td { border: 1px solid #555; padding-left: 1em } 
+th { color: #fff; background-color: #333 }
+
