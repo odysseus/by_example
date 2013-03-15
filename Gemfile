@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
+gem 'bootstrap-sass'
+gem 'jquery-rails'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development, :test do
 	gem 'rspec-rails'
 	gem 'guard-rspec'
@@ -27,5 +27,3 @@ end
 group :production do
 	gem 'pg'
 end
-
-gem 'jquery-rails'
