@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.12'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
+gem 'pg'
 
 group :development, :test do
 	gem 'rspec-rails'
@@ -12,7 +13,7 @@ group :development, :test do
 	gem 'capybara', '1.1.2'
 	gem 'rb-fsevent'
 	gem 'growl'
-	gem 'sqlite3'
+	gem 'activerecord-postgresql-adapter'
 end
 
 group :development do
@@ -28,6 +29,3 @@ group :assets do
   gem 'slim'
 end
 
-group :production do
-	gem 'pg'
-end
