@@ -15,10 +15,11 @@ group :development, :test do
 	gem 'rb-fsevent'
 	gem 'growl'
 	gem 'activerecord-postgresql-adapter'
+	gem 'annotate'
 end
 
-group :development do
-	gem 'annotate'
+group :test do
+	gem 'factory_girl_rails'
 end
 
 # Gems used only for assets and not required
