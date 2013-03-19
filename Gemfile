@@ -5,6 +5,7 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'pg'
 gem 'bcrypt-ruby'
+gem 'unicorn-rails'
 
 group :development, :test do
 	gem 'rspec-rails'
