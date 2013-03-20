@@ -95,8 +95,7 @@ GEM
       childprocess (>= 0.2.3)
       guard (>= 1.1)
       spork (>= 0.8.4)
-    haml (4.0.0)
-      tilt
+    haml (3.1.8)
     hike (1.2.1)
     i18n (0.6.4)
     journey (1.0.4)
@@ -225,7 +224,7 @@ DEPENDENCIES
   growl
   guard-rspec
   guard-spork
-  haml
+  haml (~> 3.0)
   jquery-rails
   pg
   rails (= 3.2.12)

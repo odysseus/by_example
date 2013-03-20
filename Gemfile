@@ -9,7 +9,7 @@ gem 'unicorn-rails'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-gem 'haml'
+gem 'haml', '~>3.0'
 
 group :development, :test do
 	gem 'rspec-rails'
