@@ -7,7 +7,7 @@
         = @user.name
   .span8
     - if @user.microposts.any?
-      %h3= "Microposts #{@user.microposts.count}"
+      %h3= "#{@user.microposts.count} Chirps"
       %ol.microposts
         = render @microposts
       = will_paginate @microposts
