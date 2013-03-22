@@ -128,7 +128,6 @@ describe "Authentication" do
 
     describe "for signed in users" do
       let(:user) { FactoryGirl.create(:user) }
-      let(:user2) { FactoryGirl.create(:user) }
       before { sign_in user }
 
       describe "when attempting to access users/new" do

@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :signed_in_user,      only: [:index, :edit, :update, :destory]
   before_filter :correct_user,        only: [:edit, :update]
   before_filter :admin_user,          only: :destroy
-  before_filter :not_signed_in_user,  only: :new
+  before_filter :not_signed_in_user,  only: [:new, :create]
 
 	def show
 		@user = User.find(params[:id])
