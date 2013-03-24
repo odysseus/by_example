@@ -48,7 +48,7 @@ describe "MicropostPages" do
     let(:m1) { FactoryGirl.create(:micropost, user: other_user, content: "Hello!") }
     before { visit user_path(other_user) }
     describe "you should not see delete links" do
-      it { should_not have_selector('a', text: 'delete') }
+      it { should_not have_link('delete') }
     end
   end
 end

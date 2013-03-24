@@ -65,12 +65,16 @@ describe "User pages" do
 		it { should have_heading(user.name) }
 		it { should have_title(user.name) }
 
+    it "should show the correct number of microposts" do
+      page.should have_selector("span", 
+                                class: "microposts", 
+                                content: user.microposts.count.to_s)
+    end
+
     describe "microposts" do
       it { should have_content(m1.content) }
       it { should have_content(m2.content) }
       it { should have_content(user.microposts.count) }
-      # Testing for delete links that use the content as the title
-      it { should have_selector('a', title: 'Chunkybacon!') }
     end
 	end
 
