@@ -22,7 +22,7 @@ describe "MicropostPages" do
       end
     end
 
-    describe "With valid information" do
+    describe "with valid information" do
 
       before { fill_in 'micropost_content', with: "Vini vidi vici" }
       it "should create a micropost" do
@@ -40,6 +40,15 @@ describe "MicropostPages" do
       it "should delete a micropost" do
         expect { click_link "delete" }.to change(Micropost, :count).by(-1)
       end
+    end
+  end
+
+  describe "when visiting another user's page" do
+    let(:other_user) { FactoryGirl.create(:user) }
+    let(:m1) { FactoryGirl.create(:micropost, user: other_user, content: "Hello!") }
+    before { visit user_path(other_user) }
+    describe "you should not see delete links" do
+      it { should_not have_selector('a', text: 'delete') }
     end
   end
 end
