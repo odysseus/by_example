@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'capybara'
 
 describe "User pages" do
 	subject { page }
