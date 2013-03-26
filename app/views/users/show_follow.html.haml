@@ -6,7 +6,7 @@
       %h1= @user.name
       %span= link_to "view my profile", @user
       %span
-        %b Microposts:
+        %b Chirps:
         = @user.microposts.count
     %section
       = render 'shared/stats'
