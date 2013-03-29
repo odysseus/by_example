@@ -159,7 +159,7 @@ describe User do
   end
 
   describe "micropost associations" do
-    before { @user.save }
+    before { @user.save! }
     let!(:older_micropost) do
       FactoryGirl.create(:micropost, user: @user, created_at: 1.day.ago)
     end
@@ -209,7 +209,6 @@ describe User do
     describe "should destroy associated relationships" do
       before { @user.follow!(followed_user) }
       @user.destroy
-      a
     end
   end
 
