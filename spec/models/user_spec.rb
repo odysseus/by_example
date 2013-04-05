@@ -202,16 +202,6 @@ describe User do
     end
   end
 
-  describe "relationship associations" do
-    before { @user.save }
-    let(:followed_user) { FactoryGirl.create(:user) }
-
-    describe "should destroy associated relationships" do
-      before { @user.follow!(followed_user) }
-      @user.destroy
-    end
-  end
-
   describe "following" do
     let(:other_user) { FactoryGirl.create(:user) }
     before do
