@@ -13,6 +13,7 @@
 // FOR HEROKU:  require jquery must come first
 // FOR LOCAL:   require bootstrap must come first, hell if I know why
 //
+//= require bootstrap
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap

@@ -22,9 +22,6 @@ group :development, :test do
 	gem 'growl'
 	gem 'activerecord-postgresql-adapter'
 	gem 'annotate'
-end
-
-group :test do
 	gem 'factory_girl_rails'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
