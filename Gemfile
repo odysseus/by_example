@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '<4.0.0'
+gem 'rails'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'pg'
@@ -23,6 +23,7 @@ group :development, :test do
 	gem 'activerecord-postgresql-adapter'
 	gem 'annotate'
 	gem 'factory_girl_rails'
+  gem 'factory_girl'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
 end

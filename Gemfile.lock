@@ -221,6 +221,7 @@ DEPENDENCIES
   coffee-rails
   cucumber-rails
   database_cleaner
+  factory_girl
   factory_girl_rails
   faker
   growl
@@ -229,7 +230,7 @@ DEPENDENCIES
   haml
   jquery-rails
   pg
-  rails (< 4.0.0)
+  rails
   rb-fsevent
   redcarpet
   rspec-rails

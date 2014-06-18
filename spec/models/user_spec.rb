@@ -53,7 +53,7 @@ describe User do
 		before { @user.email = " " }
 		it { should_not be_valid }
 	end
-	
+
 	describe "When username is too long" do
 		before { @user.name = "a" * 51 }
 		it { should_not be_valid }
@@ -61,7 +61,7 @@ describe User do
 
 	describe "When email format is invalid" do
 		it "should be invalid" do
-			addresses = %w[user@foo,com user_at_foo.org example.user@foo. 
+			addresses = %w[user@foo,com user_at_foo.org example.user@foo.
 											foo@bar_baz.com foo@bar+baz.com]
 			addresses.each do |invalid_address|
 				@user.email = invalid_address
