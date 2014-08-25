@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "User pages" do
-	subject { page }
+  subject { page }
 
   describe "index" do
 
@@ -47,22 +47,22 @@ describe "User pages" do
     end
   end
 
-	describe "signup page" do
-		before { visit signup_path }
+  describe "signup page" do
+    before { visit signup_path }
 
-		it { should have_heading("Sign Up") }
-		it { should have_title("Sign Up") }
-	end
+    it { should have_heading("Sign Up") }
+    it { should have_title("Sign Up") }
+  end
 
-	describe "profile page" do
-		let(:user) { FactoryGirl.create(:user) }
+  describe "profile page" do
+    let(:user) { FactoryGirl.create(:user) }
     let!(:m1) { FactoryGirl.create(:micropost, user: user, content: "foo") }
     let!(:m2) { FactoryGirl.create(:micropost, user: user, content: "bar") }
 
-		before { visit user_path(user) }
+    before { visit user_path(user) }
 
-		it { should have_heading(user.name) }
-		it { should have_title(user.name) }
+    it { should have_heading(user.name) }
+    it { should have_title(user.name) }
 
     it "should show the correct number of microposts" do
       page.should have_selector("span", 
@@ -75,32 +75,32 @@ describe "User pages" do
       it { should have_content(m2.content) }
       it { should have_content(user.microposts.count) }
     end
-	end
+  end
 
-	describe "signup" do
+  describe "signup" do
 
-		before { visit signup_path }
-		let(:submit) { "Create my account" }
+    before { visit signup_path }
+    let(:submit) { "Create my account" }
 
-		describe "with invalid information" do
-			it "should not create a user" do
-				expect { click_button submit }.not_to change(User, :count)
-			end
+    describe "with invalid information" do
+      it "should not create a user" do
+        expect { click_button submit }.not_to change(User, :count)
+      end
 
-			describe "after submission" do
-				before { click_button submit }
+      describe "after submission" do
+        before { click_button submit }
 
-				it { should have_title("Sign Up") }
-				it { should have_content("error") }
-			end
-		end
-		
-		describe "with valid information" do
+        it { should have_title("Sign Up") }
+        it { should have_content("error") }
+      end
+    end
+    
+    describe "with valid information" do
       before { sign_up }
 
-			it "should create a user" do
-				expect { click_button submit }.to change(User, :count).by(1)
-			end
+      it "should create a user" do
+        expect { click_button submit }.to change(User, :count).by(1)
+      end
 
       describe "after saving the user" do
         before { click_button submit }
@@ -110,8 +110,8 @@ describe "User pages" do
         it { should flash_success('Welcome') }
         it { should have_link('Sign out') }
       end
-		end
-	end
+    end
+  end
 
   describe "edit" do
     let(:user) { FactoryGirl.create(:user) }
@@ -133,22 +133,22 @@ describe "User pages" do
     end
 
     describe "with valid information" do
-	    let(:new_name) { "New Name" }
-	    let(:new_email) { "new@example.com" }
-	    before do
-		    fill_in "Name",								with: new_name
-		    fill_in "Email", 							with: new_email
-		    fill_in "Password", 					with: user.password
-		    fill_in "Confirm Password", 	with: user.password
+      let(:new_name) { "New Name" }
+      let(:new_email) { "new@example.com" }
+      before do
+        fill_in "Name",                with: new_name
+        fill_in "Email",               with: new_email
+        fill_in "Password",           with: user.password
+        fill_in "Confirm Password",   with: user.password
         click_button "Save changes"
-		  end
-		
-		  it { should have_title new_name }
-		  it { should flash_success }
-		  it { should have_link('Sign out', href: signout_path) }
-		  specify { user.reload.name.should == new_name }
-		  specify { user.reload.email.should == new_email }
-		end
+      end
+    
+      it { should have_title new_name }
+      it { should flash_success }
+      it { should have_link('Sign out', href: signout_path) }
+      specify { user.reload.name.should == new_name }
+      specify { user.reload.email.should == new_email }
+    end
   end
 
   describe "index" do

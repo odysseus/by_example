@@ -1,5 +1,4 @@
-uby on Rails Tutorial: sample application
+# Avian
 
-This is the sample application for
-[*Ruby on Rails Tutorial: Learn Rails by Example*](http://railstutorial.org/)
-by [Michael Hartl](http://michaelhartl.com/).
+A Twitter clone used to learn Rails, based largely on the book "Learn
+Rails By Example" by Michael Hartl.
